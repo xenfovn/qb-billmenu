@@ -1,4 +1,4 @@
-QBCore.Functions.CreateCallback('qb-phone:server:PayInvoice', function(source, cb, society, amount, invoiceId, sendercitizenid)
+```QBCore.Functions.CreateCallback('qb-phone:server:PayInvoice', function(source, cb, society, amount, invoiceId, sendercitizenid)
     local Invoices = {}
     local Ply = QBCore.Functions.GetPlayer(source)
     local SenderPly = QBCore.Functions.GetPlayerByCitizenId(sendercitizenid)
@@ -29,8 +29,8 @@ QBCore.Functions.CreateCallback('qb-phone:server:PayInvoice', function(source, c
     end
     cb(true, Invoices)
 end)
-
-QBCore.Functions.CreateCallback('qb-phone:server:DeclineInvoice', function(source, cb, sender, amount, invoiceId)
+```
+```QBCore.Functions.CreateCallback('qb-phone:server:DeclineInvoice', function(source, cb, sender, amount, invoiceId)
     local Invoices = {}
     local Ply = QBCore.Functions.GetPlayer(source)
     exports.oxmysql:execute('DELETE FROM phone_invoices WHERE id = ?', {invoiceId})
@@ -40,4 +40,4 @@ QBCore.Functions.CreateCallback('qb-phone:server:DeclineInvoice', function(sourc
         Invoices = invoices
     end
     cb(true, Invoices)
-end)
+end)```
