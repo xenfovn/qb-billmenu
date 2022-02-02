@@ -6,7 +6,7 @@ Config = {}
 Config.oxmysql = 187 -- your version oxmysql , 1.9.3 = 193 , 1.8.7 = 187
 
 Config.Webhooks = { -- webhook log send bild
-    ['logbill'] = 'https://canary.discord.com/api/webhooks/936866435681124363/97bkCzYP3ukGH5JCYSq3FM7f_07i_P2nf66-7wUQHXhhr1Z-FGJcl5RsV9YxqPx533Au',
+    ['logbill'] = '',
 }
 
 Lang = { -- config language
