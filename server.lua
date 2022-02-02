@@ -23,7 +23,7 @@ RegisterNetEvent(FileName..':server:send', function(playerId, amount, reason)
             TriggerClientEvent('QBCore:Notify', source, Lang.sendsuccess, 'success')
             TriggerClientEvent('QBCore:Notify', billed.PlayerData.source, Lang.newinvoice)
             TriggerClientEvent(FileName..':client:sendBillingMail', playerId, biller.PlayerData.job.name, amount, reason, billed.PlayerData.citizenid)
-            TriggerEvent(FileName..':server:CreateLog', 'logbill', 'Hóa Đơn', 'blue', '**'..biller.PlayerData.charinfo.firstname..'** ('..biller.PlayerData.citizenid..') đã gửi hóa đơn cho **'..billed.PlayerData.charinfo.firstname..'** ('..billed.PlayerData.citizenid..') số tiền $'..amount..' thành công.')
+            TriggerEvent(FileName..':server:CreateLog', 'logbill', 'Bill', 'blue', '**'..biller.PlayerData.charinfo.firstname..'** ('..biller.PlayerData.citizenid..') invoice sent to **'..billed.PlayerData.charinfo.firstname..'** ('..billed.PlayerData.citizenid..') amount of $'..amount..' Thank You!')
         else
             TriggerClientEvent('QBCore:Notify', source, Lang.invaildamount, 'error')
         end
