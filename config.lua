@@ -10,36 +10,36 @@ Config.Webhooks = { -- webhook log send bild
 }
 
 Lang = { -- config language
-    newinvoice = 'bạn nhận được hóa đơn mới',
-    sendsuccess = 'Bạn đã gửi hóa đơn',
-    invaildamount = 'số tiền phải lớn hơn 0',
-    selfbillerror = 'không thể gửi hóa đơn cho bản thân',
-    playernotonline = 'Người chơi không tồn tại',
-    noaccess = 'bạn không có quyền làm việc này',
-    billform = 'Hóa Đơn Từ',
-    billing = 'Hóa Đơn',
-    createbill = 'Tạo Hóa Đơn',
-    amount = 'số tiền: ',
-    reason = 'nội dung: ',
-    pleasepayit = 'vui lòng thanh toán hóa đơn',
+    newinvoice = 'New invoice',
+    sendsuccess = 'Sent',
+    invaildamount = 'Amt Must be Greater than 0',
+    selfbillerror = 'Cannot Bill Yourself',
+    playernotonline = 'ID not online',
+    noaccess = 'Not authorized to do this',
+    billform = 'Invoice Form',
+    billing = 'Bill',
+    createbill = 'Create Invoice',
+    amount = 'Amount: ',
+    reason = 'Reason: ',
+    pleasepayit = 'Please Pay Bill',
 
-    cid = 'Số ID(#)',
-    camount = 'Số Tiền ($)',
-    creason = 'nội dung',
+    cid = 'Player ID(#)',
+    camount = 'Amount of Money ($)',
+    creason = 'Reason',
 }
 
 Config.job = { -- rename job label
     ['police'] = {
-        label = 'cảnh sát'
+        label = 'Police'
     },
     ['mechanic'] = {
-        label = 'cứu hộ'
+        label = 'Mechanic'
     },
-    ['doxe'] = {
-        label = 'độ xe'
+    ['cardealer'] = {
+        label = 'CarDealer'
     },
     ['ambulance'] = {
-        label = 'bệnh viên'
+        label = 'Hospital'
     },
 }
 

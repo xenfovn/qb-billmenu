@@ -22,7 +22,7 @@
     TriggerEvent('qb-phone:server:sendNewMailToOffline', sendercitizenid, invoiceMailData)
     TriggerEvent("qb-bossmenu:server:addAccountMoney", society, amount)
     exports.oxmysql:execute('DELETE FROM phone_invoices WHERE id = ?', {invoiceId})
-    TriggerClientEvent('qb-billmenu:server:CreateLog', 'logbill', 'Hóa Đơn', 'lightgreen', '**'..Ply.PlayerData.charinfo.firstname..'** ('..Ply.PlayerData.citizenid..') thanh toán số tiền '..amount..' cho công ty '..society..' thành công. (hóa đơn số: '..invoiceId..')')
+    TriggerClientEvent('qb-billmenu:server:CreateLog', 'logbill', 'Bill', 'lightgreen', '**'..Ply.PlayerData.charinfo.firstname..'** ('..Ply.PlayerData.citizenid..') Please Pay the Following'..amount..' for company'..society..' Thank you. (Invoice Number: '..invoiceId..')')
     local invoices = exports.oxmysql:executeSync('SELECT * FROM phone_invoices WHERE citizenid = ?', {Ply.PlayerData.citizenid})
     if invoices[1] ~= nil then
         Invoices = invoices
@@ -35,7 +35,7 @@ end)
     local Ply = QBCore.Functions.GetPlayer(source)
     exports.oxmysql:execute('DELETE FROM phone_invoices WHERE id = ?', {invoiceId})
     local invoices = exports.oxmysql:executeSync('SELECT * FROM phone_invoices WHERE citizenid = ?', {Ply.PlayerData.citizenid})
-    TriggerClientEvent('qb-billmenu:server:CreateLog', 'logbill', 'Hóa Đơn', 'red', '**'..Ply.PlayerData.charinfo.firstname..'** ('..Ply.PlayerData.citizenid..') đã hủy hóa đơn số tiền '..amount..'. (hóa đơn số: '..invoiceId..')')
+    TriggerClientEvent('qb-billmenu:server:CreateLog', 'logbill', 'Bill', 'red', '**'..Ply.PlayerData.charinfo.firstname..'** ('..Ply.PlayerData.citizenid..') Cancelled Invoice Amount '..amount..'. (Invoice Number: '..invoiceId..')')
     if invoices[1] ~= nil then
         Invoices = invoices
     end
