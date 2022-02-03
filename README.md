@@ -1,3 +1,3 @@
 # qb-billmenu
 
-hi viewer , i need pull request translate to english , anyone can help me ?
+thanks translate english by https://github.com/d-w00d
